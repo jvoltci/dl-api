@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 5000
 const sparkAPI = require('./routes/idx/sparkAPI')
 
 app.use((req, res, next) => {
-    const allowedOrigins = ['http://localhost:5173', 'https://jvoltci.github.io/direct-lender/'];
+    const allowedOrigins = ['http://localhost:5173', 'https://jvoltci.github.io'];
     const origin = req.headers.origin;
     if (allowedOrigins.includes(origin)) {
         res.setHeader('Access-Control-Allow-Origin', origin);
